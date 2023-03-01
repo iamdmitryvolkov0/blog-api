@@ -10,6 +10,7 @@ class GetArticleAction
     public function execute(int $id): JsonResponse
     {
         $article = Article::findOrFail($id);
+
         return response()->json($article, 200);
     }
 }
