@@ -18,3 +18,6 @@ Route::get('/articles', [ArticlesController::class, 'showArticles']);
 Route::get('/articles/{id}', [ArticlesController::class, 'showArticle']);
 
 Route::post('/articles', [ArticlesController::class, 'storeArticle']);
+
+Route::put('/articles/{id}',[ArticlesController::class, 'putArticleData']);
+Route::patch('/articles/{id}',[ArticlesController::class, 'patchArticleData']);
