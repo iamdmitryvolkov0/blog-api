@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/articles', [ArticlesController::class, 'showArticles']);
 Route::get('/articles/{id}', [ArticlesController::class, 'showArticle']);
+
+Route::post('/articles', [ArticlesController::class, 'storeArticle']);
