@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Actions\DeleteArticleAction;
 use App\Http\Controllers\Controller;
 use App\Actions\CreateArticleAction;
 use App\Actions\GetAllArticlesAction;
@@ -38,5 +39,10 @@ class ArticlesController extends Controller
     public function patchArticleData(PatchArticleRequest $request, PatchArticleDataAction $action, int $id): JsonResponse
     {
         return $action->execute($id, $request->validated());
+    }
+
+    public function deleteArticle(DeleteArticleAction $action, int $id): JsonResponse
+    {
+        return $action->execute($id);
     }
 }
