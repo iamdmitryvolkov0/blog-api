@@ -21,8 +21,8 @@ class ArticlesController extends Controller
         return $action->execute($id);
     }
 
-    public function storeArticle(CreateArticleRequest $request, CreateArticleAction $action)
+    public function storeArticle(CreateArticleRequest $request, CreateArticleAction $action): JsonResponse
     {
-        $action->execute($request->validated());
+        return $action->execute($request->validated());
     }
 }

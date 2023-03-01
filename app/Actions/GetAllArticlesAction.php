@@ -10,6 +10,9 @@ class GetAllArticlesAction
     public function execute(): JsonResponse
     {
         $articles = Article::all();
-        return response()->json($articles, 200);
+        return response()->json([
+            'status' => true,
+            'articles' => $articles,
+        ]);
     }
 }
