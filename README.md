@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Laravel Blog REST API</title>
   </head>
   <body>
     <h1>Laravel Blog REST API</h1>
