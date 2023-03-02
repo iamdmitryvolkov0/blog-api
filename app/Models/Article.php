@@ -15,4 +15,12 @@ class Article extends Model
     use HasFactory;
 
     protected $fillable = ['title', 'body'];
+
+    protected $casts = [
+        'created_at' => 'date:d-m-Y',
+    ];
+
+    protected $hidden = [
+        'updated_at',
+    ];
 }
